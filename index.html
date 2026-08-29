@@ -5,34 +5,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruida Di</title>
+
+    <style>
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.65;
+            color: #222;
+            background: #ffffff;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 60px auto;
+            padding: 0 30px 60px 30px;
+        }
+
+        header {
+            margin-bottom: 45px;
+            border-bottom: 1px solid #dddddd;
+            padding-bottom: 22px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0 0 10px 0;
+            font-weight: normal;
+        }
+
+        h2 {
+            font-size: 1.45em;
+            margin-top: 42px;
+            margin-bottom: 15px;
+            font-weight: normal;
+            border-bottom: 1px solid #eeeeee;
+            padding-bottom: 6px;
+        }
+
+        p {
+            font-size: 1.05em;
+        }
+
+        a {
+            color: #1656a3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            margin-right: 20px;
+        }
+
+        .affiliation {
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .publication {
+            margin-bottom: 24px;
+        }
+
+        .publication-title {
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #dddddd;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin-top: 30px;
+                padding: 0 20px 40px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Ruida Di</h1>
+<div class="container">
 
-    <p>
-        Welcome to my academic homepage.
-    </p>
+    <header>
+        <h1>Ruida Di</h1>
 
-    <h2>Research</h2>
+        <div class="affiliation">
+            Mathematics
+        </div>
 
-    <p>
-        My research interests include number theory, homogeneous dynamics,
-        Diophantine geometry, and related topics.
-    </p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <h2>Publications and Preprints</h2>
+    <section id="about">
+        <h2>About</h2>
 
-    <p>
-        My publications and preprints will be listed here.
-    </p>
+        <p>
+            Welcome to my academic homepage.
+            I am a mathematician working in number theory,
+            homogeneous dynamics, Diophantine geometry,
+            and related areas.
+        </p>
+    </section>
 
-    <h2>Contact</h2>
+    <section id="research">
+        <h2>Research Interests</h2>
 
-    <p>
-        Email: 
-    </p>
+        <p>
+            My research interests include number theory,
+            homogeneous dynamics, Diophantine geometry,
+            arithmetic geometry, and related topics.
+        </p>
+    </section>
+
+    <section id="publications">
+        <h2>Publications and Preprints</h2>
+
+        <div class="publication">
+            <div class="publication-title">
+                Title of Paper
+            </div>
+
+            <div>
+                Ruida Di
+            </div>
+
+            <div>
+                Preprint, 2026.
+            </div>
+
+            <div>
+                <a href="#">arXiv</a>
+                &nbsp;|&nbsp;
+                <a href="#">PDF</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <p>
+            Email: your-email@example.com
+        </p>
+    </section>
+
+    <footer>
+        Last updated: 2026
+    </footer>
+
+</div>
 
 </body>
 

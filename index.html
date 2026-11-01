@@ -114,6 +114,69 @@ h1 {
 font-size: 2em;
 }
 }
+
+
+/* Compact academic timeline, seminar, and talk list */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 19px;
+  row-gap: 8px;
+}
+nav a {
+  margin-right: 0;
+}
+
+.academic-entry, .talk-entry {
+  display: grid;
+  grid-template-columns: 124px minmax(0, 1fr);
+  column-gap: 18px;
+  margin-bottom: 19px;
+}
+.entry-date {
+  color: #666;
+  font-size: 0.98em;
+  white-space: nowrap;
+  padding-top: 1px;
+}
+.entry-main {
+  min-width: 0;
+}
+.entry-heading {
+  font-size: 1.05em;
+  line-height: 1.5;
+}
+.entry-detail {
+  color: #555;
+  font-size: 0.98em;
+  margin-top: 2px;
+}
+.entry-detail a, .entry-heading a {
+  overflow-wrap: anywhere;
+}
+.seminar-name {
+  font-size: 1.05em;
+  margin-bottom: 4px;
+}
+.seminar-description {
+  margin-top: 4px;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .academic-entry, .talk-entry {
+    grid-template-columns: 1fr;
+    row-gap: 2px;
+    margin-bottom: 20px;
+  }
+  .entry-date {
+    font-size: 0.92em;
+  }
+  nav {
+    column-gap: 16px;
+  }
+}
+
 </style>
 
 </head>
@@ -132,10 +195,13 @@ Morningside Center of Mathematics<br>
 Chinese Academy of Sciences
 </div>
 
-<nav>
+<nav aria-label="Main navigation">
 <a href="#about">About</a>
 <a href="#research">Research</a>
+<a href="#background">Background</a>
 <a href="#publications">Publications</a>
+<a href="#seminar">Seminar</a>
+<a href="#talks">Talks</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -167,6 +233,52 @@ I am particularly interested in abelian varieties, Shimura varieties, and algebr
 <p>
 I work on problems concerning rational points, unlikely intersections, and equidistribution.
 </p>
+
+</section>
+
+<section id="background">
+
+<h2>Academic Background</h2>
+
+<div class="academic-entry">
+  <div class="entry-date">2025–present</div>
+  <div class="entry-main">
+    <div class="entry-heading">Postdoctoral Researcher, Morningside Center of Mathematics, Chinese Academy of Sciences, Beijing</div>
+    <div class="entry-detail">Postdoctoral mentor: <a href="https://www.mcm.ac.cn/people/members/yt/202601/t20260122_1146385.html" target="_blank" rel="noopener noreferrer">Ye Tian</a>. Research in number theory, Diophantine geometry, and related directions.</div>
+  </div>
+</div>
+
+<div class="academic-entry">
+  <div class="entry-date">2021–2024</div>
+  <div class="entry-main">
+    <div class="entry-heading">Ph.D. (Dr. rer. nat.), Leibniz University Hannover, Germany</div>
+    <div class="entry-detail">Advisor: <a href="https://ziyangjeremygao.github.io/" target="_blank" rel="noopener noreferrer">Ziyang Gao</a>. Dissertation: <a href="https://doi.org/10.15488/17842" target="_blank" rel="noopener noreferrer"><em>Uniform Bogomolov Conjecture for Tori</em></a>, concerning Diophantine geometry, height theory, and equidistribution.</div>
+  </div>
+</div>
+
+<div class="academic-entry">
+  <div class="entry-date">2018–2021</div>
+  <div class="entry-main">
+    <div class="entry-heading">Master's degree in Fundamental Mathematics, Sorbonne University, Paris, France</div>
+    <div class="entry-detail">Advisor: <a href="https://ziyangjeremygao.github.io/" target="_blank" rel="noopener noreferrer">Ziyang Gao</a>. Studied number theory and Diophantine geometry, with an interest in arithmetic geometry and unlikely intersections.</div>
+  </div>
+</div>
+
+<div class="academic-entry">
+  <div class="entry-date">2015–2018</div>
+  <div class="entry-main">
+    <div class="entry-heading">Master's degree in Mathematics, Peking University, Beijing, China</div>
+    <div class="entry-detail">Advisor: <a href="https://tian.bicmr.pku.edu.cn/index.htm" target="_blank" rel="noopener noreferrer">Gang Tian</a>. Research in geometric analysis.</div>
+  </div>
+</div>
+
+<div class="academic-entry">
+  <div class="entry-date">2011–2015</div>
+  <div class="entry-main">
+    <div class="entry-heading">B.S. in Mathematics, Peking University, Beijing, China</div>
+    <div class="entry-detail">Undergraduate research on computations of homotopy groups of spheres with <a href="https://math.pku.edu.cn/jsdw/ltx/165010.htm" target="_blank" rel="noopener noreferrer">Houhong Fan</a>, and on modular forms with <a href="https://math.pku.edu.cn/jsdw/ltx/171617.htm" target="_blank" rel="noopener noreferrer">Qingchun Tian</a>.</div>
+  </div>
+</div>
 
 </section>
 
@@ -206,6 +318,56 @@ Uniform Bogomolov conjecture for algebraic tori,
 
 </section>
 
+<section id="seminar">
+
+<h2>Seminar Organization</h2>
+
+<div class="seminar-name">
+<a href="https://www.mcm.ac.cn/events/seminars/202609/t20260918_1200857.html" target="_blank" rel="noopener noreferrer">Equidistribution, Ergodic Theory and L-functions Seminar</a>
+</div>
+<div class="entry-detail">Organizer · Morningside Center of Mathematics, Chinese Academy of Sciences · Since September 2026</div>
+<p class="seminar-description">A reading and research seminar on homogeneous dynamics, the equidistribution of arithmetic orbits, relative trace formulas, and their connections to automorphic <em>L</em>-functions.</p>
+
+</section>
+
+<section id="talks">
+
+<h2>Selected Talks</h2>
+
+<div class="talk-entry">
+  <div class="entry-date">Oct. 20, 2026</div>
+  <div class="entry-main">
+    <div class="entry-heading"><em>Heights, Positions, and Shapes of Rational Subspaces over Number Fields</em></div>
+    <div class="entry-detail">Xi'an Jiaotong University, Xi'an, China.</div>
+  </div>
+</div>
+
+<div class="talk-entry">
+  <div class="entry-date">Nov. 4, 2024</div>
+  <div class="entry-main">
+    <div class="entry-heading"><a href="https://qzc.tsinghua.edu.cn/en/info/1122/4120.htm" target="_blank" rel="noopener noreferrer"><em>Uniform Bogomolov Conjecture for Algebraic Tori</em></a></div>
+    <div class="entry-detail">BIMSA–YMSC Tsinghua Number Theory Seminar, Tsinghua University, Beijing, China.</div>
+  </div>
+</div>
+
+<div class="talk-entry">
+  <div class="entry-date">Nov. 9, 2023</div>
+  <div class="entry-main">
+    <div class="entry-heading">Invited talk</div>
+    <div class="entry-detail">Institut Fourier, Université Grenoble Alpes, Grenoble, France.</div>
+  </div>
+</div>
+
+<div class="talk-entry">
+  <div class="entry-date">Nov. 7, 2023</div>
+  <div class="entry-main">
+    <div class="entry-heading">Invited talk</div>
+    <div class="entry-detail">Laboratoire de Mathématiques Blaise Pascal, Université Clermont Auvergne, Clermont-Ferrand, France.</div>
+  </div>
+</div>
+
+</section>
+
 <section id="contact">
 
 <h2>Contact</h2>
@@ -218,7 +380,7 @@ Email: <a href="mailto:drdmath@amss.ac.cn">drdmath@amss.ac.cn</a><br>
 </section>
 
 <footer>
-Last updated: September 2026
+Last updated: November 2026
 </footer>
 
 </div>

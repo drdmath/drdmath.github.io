@@ -177,6 +177,55 @@ nav a {
   }
 }
 
+
+/* Personal motto beside the name; stacks neatly on smaller screens. */
+.header-intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+.header-identity {
+  flex: 0 0 auto;
+}
+.header-quote {
+  flex: 1 1 345px;
+  max-width: 415px;
+  margin: 2px 0 0;
+  text-align: right;
+  line-height: 1.5;
+  color: #444;
+}
+.header-quote .quote-chinese {
+  font-family: "Songti SC", "Noto Serif CJK SC", "SimSun", Georgia, serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.025em;
+}
+.header-quote .quote-english {
+  margin-top: 8px;
+  font-size: 0.94rem;
+  font-style: italic;
+}
+.header-quote cite {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.79rem;
+  font-style: normal;
+  color: #707070;
+}
+@media (max-width: 760px) {
+  .header-intro {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .header-quote {
+    flex: none;
+    max-width: 100%;
+    text-align: left;
+    margin: 0;
+  }
+}
+
 </style>
 
 </head>
@@ -187,12 +236,21 @@ nav a {
 
 <header>
 
-<h1>Ruida Di (邸睿达)</h1>
-
-<div class="affiliation">
-Postdoctoral Researcher<br>
-Morningside Center of Mathematics<br>
-Chinese Academy of Sciences
+<div class="header-intro">
+  <div class="header-identity">
+    <h1>Ruida Di (邸睿达)</h1>
+    <div class="affiliation">
+      Postdoctoral Researcher<br>
+      Morningside Center of Mathematics<br>
+      Chinese Academy of Sciences
+    </div>
+  </div>
+  <blockquote class="header-quote" aria-label="Personal motto">
+    <div class="quote-chinese" lang="zh-CN">飘风不终朝，骤雨不终日。</div>
+    <cite lang="zh-CN">—— 老子《道德经》第二十三章</cite>
+    <div class="quote-english" lang="en">No gale lasts all morning; no downpour lasts all day.</div>
+    <cite lang="en">— Laozi, <em>Tao Te Ching</em>, Chapter 23</cite>
+  </blockquote>
 </div>
 
 <nav aria-label="Main navigation">

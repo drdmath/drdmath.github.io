@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Browser preview of the current v555 manuscript, with PDF and LaTeX source downloads.">
+<title>Read v555 — Further Simplification of the Dirichlet GRH Argument</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: #f4f5f7; color: #222; }
+body { font-family: Georgia, "Times New Roman", serif; }
+.toolbar {
+  position: sticky; top: 0; z-index: 10; display: flex; align-items: center;
+  gap: 18px; flex-wrap: wrap; padding: 12px 22px; background: #fff;
+  border-bottom: 1px solid #ddd; box-shadow: 0 1px 5px rgba(0,0,0,.05);
+}
+.toolbar .title { font-size: 15px; margin-right: auto; }
+.toolbar a { color: #1656a3; text-decoration: none; font-size: 14px; }
+.toolbar a:hover { text-decoration: underline; }
+main { max-width: 1500px; margin: 22px auto; padding: 0 18px 24px; }
+.viewer {
+  height: calc(100vh - 100px); min-height: 620px; width: 100%;
+  background: #777; border: 1px solid #d2d2d2; border-radius: 5px;
+  overflow: hidden;
+}
+.viewer iframe { display: block; width: 100%; height: 100%; border: 0; background: #fff; }
+.note { max-width: 950px; margin: 14px auto 0; color: #666; font-size: 13px; line-height: 1.5; }
+@media(max-width: 640px) {
+  .toolbar { gap: 10px 14px; padding: 11px 14px; }
+  .toolbar .title { flex-basis: 100%; }
+  main { margin: 10px auto; padding: 0 8px 16px; }
+  .viewer { height: calc(100vh - 132px); min-height: 500px; }
+}
+</style>
+</head>
+<body>
+<nav class="toolbar" aria-label="Manuscript navigation">
+  <a href="index.html">← Project page</a>
+  <span class="title">Zeros of Dirichlet L-functions and One-Sided Estimates · v555</span>
+  <a href="v555.pdf" target="_blank" rel="noopener">Open PDF</a>
+  <a href="v555.tex" download>LaTeX source</a>
+</nav>
+<main>
+  <div class="viewer">
+    <iframe src="v555.pdf#toolbar=1&navpanes=0&view=FitH"
+      title="v555 manuscript PDF preview"
+      loading="eager"></iframe>
+  </div>
+  <p class="note">This browser reader embeds the supplied PDF to preserve its exact mathematical typesetting and pagination. The original LaTeX source is available from the link above.</p>
+</main>
+</body>
+</html>

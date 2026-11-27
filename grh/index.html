@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="An ongoing human-readable proof project on the generalized Riemann hypothesis for Dirichlet L-functions. The proof is incomplete.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An ongoing project on human-readable arguments toward the generalized Riemann hypothesis for Dirichlet L-functions. The proof is incomplete.">
 <title>GRH Human-Readable Proof Project</title>
 <style>
-body { font-family: Georgia, "Times New Roman", serif; line-height: 1.65; color: #222; background: #fff; margin: 0; }
-.container { max-width: 850px; margin: 60px auto; padding: 0 30px 60px; }
-header { margin-bottom: 36px; border-bottom: 1px solid #ddd; padding-bottom: 22px; }
-h1 { font-size: 2.05em; line-height: 1.3; font-weight: normal; margin: 15px 0 8px; }
-h2 { font-size: 1.45em; margin: 36px 0 15px; font-weight: normal; border-bottom: 1px solid #eee; padding-bottom: 6px; }
-p { font-size: 1.05em; }
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: #222; font-family: Georgia, "Times New Roman", serif; font-size: 16px; line-height: 1.65; }
+.container { max-width: 930px; margin: 52px auto; padding: 0 30px 54px; }
 a { color: #1656a3; text-decoration: none; }
 a:hover { text-decoration: underline; }
-.meta, .format { color: #666; }
-.status { border-left: 2px solid #aaa; padding-left: 14px; }
-.volumes { list-style: none; padding: 0; margin: 0; }
-.volumes li { display: grid; grid-template-columns: 115px minmax(0, 1fr); gap: 12px; margin-bottom: 13px; }
-.volume-label { color: #666; }
-.format { font-size: .85em; white-space: nowrap; }
-footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #ddd; color: #777; font-size: .9em; }
-@media(max-width:600px) { .container { margin: 30px auto; padding: 0 20px 40px; } h1 { font-size: 1.7em; } .volumes li { grid-template-columns: 1fr; gap: 1px; margin-bottom: 16px; } .volume-label { font-size: .9em; } }
+a:focus-visible, summary:focus-visible { outline: 2px solid #1656a3; outline-offset: 4px; }
+header { padding-bottom: 18px; border-bottom: 1px solid #ddd; }
+h1 { font-size: 2.05rem; line-height: 1.3; font-weight: normal; margin: 15px 0 7px; }
+.subtitle, .meta { color: #666; }
+.subtitle { font-size: 1.03rem; }
+nav { display: flex; flex-wrap: wrap; gap: 5px 22px; margin-top: 20px; font-size: .94rem; }
+section { scroll-margin-top: 24px; }
+h2 { font-size: 1.45rem; font-weight: normal; margin: 29px 0 12px; border-bottom: 1px solid #e7e7e7; padding-bottom: 6px; }
+p { margin: 10px 0 13px; }
+.status { border-left: 2px solid #aaa; padding-left: 13px; margin: 14px 0 0; }
+.meta { font-size: .96rem; margin-bottom: 8px; }
+.manuscript-title { font-style: italic; margin-top: 10px; }
+.links { margin: 12px 0; }
+.links a { display: inline-block; }
+summary { cursor: pointer; color: #1656a3; font-size: 1rem; padding: 5px 0; }
+summary:hover { text-decoration: underline; }
+details { margin-top: 12px; }
+.volumes { list-style: none; padding: 10px 0 0; margin: 5px 0 0; }
+.volumes li { display: grid; grid-template-columns: 102px minmax(0, 1fr) 155px; align-items: baseline; gap: 12px; padding: 9px 0; border-top: 1px solid #eee; font-size: .94rem; }
+.volume-label, .page-count { color: #666; }
+.volume-links { white-space: nowrap; font-size: .9rem; text-align: right; }
+.page-count { display: inline-block; min-width: 46px; margin-left: 7px; }
+#feedback { margin-bottom: 0; }
+@media (max-width: 650px) {
+  .container { margin: 28px auto; padding: 0 20px 36px; }
+  h1 { font-size: 1.7rem; }
+  h2 { font-size: 1.3rem; }
+  nav { gap: 6px 15px; }
+  .volumes li { grid-template-columns: 90px minmax(0, 1fr); gap: 1px 9px; }
+  .volume-links { grid-column: 2; text-align: left; }
+}
 </style>
 </head>
 <body>
@@ -29,69 +50,75 @@ footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #ddd; color:
 <header>
 <a href="../">&larr; Back to homepage</a>
 <h1>GRH Human-Readable Proof Project (Ongoing)</h1>
-<div class="meta">The generalized Riemann hypothesis for Dirichlet <em>L</em>-functions</div>
+<div class="subtitle">The generalized Riemann hypothesis for Dirichlet <em>L</em>-functions</div>
+<nav aria-label="Project sections">
+  <a href="#main-manuscript">Main Manuscript</a>
+  <a href="#simplification">Further Simplification</a>
+  <a href="#archive">Archive</a>
+  <a href="#feedback">Feedback</a>
+</nav>
 </header>
 <main>
 <section id="overview">
 <h2>Overview</h2>
 <p>This project aims to develop a complete, rigorous, and human-readable proof of the generalized Riemann hypothesis for Dirichlet <em>L</em>-functions. The current manuscripts represent work in progress and will be gradually revised, refined, and updated as the project develops.</p>
-<p class="status"><strong>Proof status: incomplete.</strong> The current manuscripts do not constitute a verified proof of GRH. Volume I describes the proposed reduction and the estimates that remain to be established. The arguments are subject to further revision and verification.</p>
+<p class="status"><strong>Proof status: incomplete.</strong> Neither of the current manuscripts constitutes a verified proof of GRH.</p>
 </section>
-<section id="latest">
-<h2>Latest Edition</h2>
-<p><strong>Edition 930</strong> &middot; 27 November 2026 &middot; 27 volumes &middot; 2,846 pages</p>
-<p><a href="v930/Dirichlet-GRH-v930.zip">Download all manuscripts and LaTeX sources (ZIP, 21.1 MB)</a></p>
-<p>Volume I is the recommended starting point. It includes a guide to all twenty-seven volumes and describes the current proof status.</p>
-</section>
-<section id="previous-edition">
-<h2>Previous Edition</h2>
-<p><strong>Edition 700</strong> &middot; 26 November 2026 &middot; 20 volumes</p>
-<p><a href="v700/Dirichlet-GRH-v700.zip">Download the archived edition (ZIP, 17.3 MB)</a></p>
-</section>
-
-<section id="parallel-project">
-<h2>Further Simplification</h2>
-<p>A parallel line of work within this project explores a further simplification of the approach to Dirichlet GRH. It remains a work in progress.</p>
-<p><a href="simplification/">Further Simplification of the Dirichlet GRH Argument</a> &middot; <a href="simplification/read.html">HTML preview</a> &middot; <a href="simplification/v653.pdf">PDF</a> &middot; <a href="simplification/v653.tex">LaTeX source</a></p>
-</section>
-<section id="volumes">
-<h2>Manuscripts</h2>
+<section id="main-manuscript">
+<h2>1. Main Manuscript</h2>
+<p class="meta"><strong>Edition 930</strong> · 27 November 2026 · 27 volumes · 2,846 pages</p>
+<p>Volume I provides a guide to the complete manuscript and describes the current proof status.</p>
+<p class="links"><a href="v930/Dirichlet-GRH-v930-Volume-I.pdf">Read Volume I (PDF)</a> &nbsp;·&nbsp; <a href="v930/Dirichlet-GRH-v930.zip" download>Download all volumes (PDF &amp; LaTeX, ZIP)</a></p>
+<details id="volumes">
+<summary>View all 27 volumes (PDF &amp; LaTeX)</summary>
 <ul class="volumes">
-      <li><span class="volume-label">Volume I</span><span><a href="v930/Dirichlet-GRH-v930-Volume-I.pdf">Dirichlet zeros and the arithmetic of power intervals</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-I.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-I.tex">LaTeX</a>]</span> <span class="format">136 pp.</span></span></li>
-      <li><span class="volume-label">Volume II</span><span><a href="v930/Dirichlet-GRH-v930-Volume-II.pdf">Strict local conditions and Selmer groups of twists</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-II.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-II.tex">LaTeX</a>]</span> <span class="format">80 pp.</span></span></li>
-      <li><span class="volume-label">Volume III</span><span><a href="v930/Dirichlet-GRH-v930-Volume-III.pdf">Trace extensions, Frobenius lifts and local cup products</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-III.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-III.tex">LaTeX</a>]</span> <span class="format">122 pp.</span></span></li>
-      <li><span class="volume-label">Volume IV</span><span><a href="v930/Dirichlet-GRH-v930-Volume-IV.pdf">Cyclotomic descent and relative strict orders</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-IV.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-IV.tex">LaTeX</a>]</span> <span class="format">111 pp.</span></span></li>
-      <li><span class="volume-label">Volume V</span><span><a href="v930/Dirichlet-GRH-v930-Volume-V.pdf">Class groups, special values and strict orders</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-V.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-V.tex">LaTeX</a>]</span> <span class="format">106 pp.</span></span></li>
-      <li><span class="volume-label">Volume VI</span><span><a href="v930/Dirichlet-GRH-v930-Volume-VI.pdf">Marked Galois deformations and trace congruences</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-VI.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-VI.tex">LaTeX</a>]</span> <span class="format">92 pp.</span></span></li>
-      <li><span class="volume-label">Volume VII</span><span><a href="v930/Dirichlet-GRH-v930-Volume-VII.pdf">Auxiliary fields and ordinary cuspidal families</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-VII.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-VII.tex">LaTeX</a>]</span> <span class="format">84 pp.</span></span></li>
-      <li><span class="volume-label">Volume VIII</span><span><a href="v930/Dirichlet-GRH-v930-Volume-VIII.pdf">Integral trace quotients and Hecke support</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-VIII.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-VIII.tex">LaTeX</a>]</span> <span class="format">85 pp.</span></span></li>
-      <li><span class="volume-label">Volume IX</span><span><a href="v930/Dirichlet-GRH-v930-Volume-IX.pdf">Fixed-weight Hecke support and symplectic deformations</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-IX.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-IX.tex">LaTeX</a>]</span> <span class="format">127 pp.</span></span></li>
-      <li><span class="volume-label">Volume X</span><span><a href="v930/Dirichlet-GRH-v930-Volume-X.pdf">Projected torus periods and congruence modules</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-X.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-X.tex">LaTeX</a>]</span> <span class="format">84 pp.</span></span></li>
-      <li><span class="volume-label">Volume XI</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XI.pdf">Strict cohomology at exceptional weights</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XI.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XI.tex">LaTeX</a>]</span> <span class="format">119 pp.</span></span></li>
-      <li><span class="volume-label">Volume XII</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XII.pdf">Cuspidal companions and ordinary Hecke fibers</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XII.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XII.tex">LaTeX</a>]</span> <span class="format">96 pp.</span></span></li>
-      <li><span class="volume-label">Volume XIII</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XIII.pdf">CM theta derivatives and Frobenius translates</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XIII.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XIII.tex">LaTeX</a>]</span> <span class="format">117 pp.</span></span></li>
-      <li><span class="volume-label">Volume XIV</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XIV.pdf">Unitary branching and first occurrence in the theta tower</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XIV.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XIV.tex">LaTeX</a>]</span> <span class="format">122 pp.</span></span></li>
-      <li><span class="volume-label">Volume XV</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XV.pdf">Definite theta kernels and the three global exchanges</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XV.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XV.tex">LaTeX</a>]</span> <span class="format">102 pp.</span></span></li>
-      <li><span class="volume-label">Volume XVI</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XVI.pdf">Integral theta projections and terminal determinants</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XVI.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XVI.tex">LaTeX</a>]</span> <span class="format">93 pp.</span></span></li>
-      <li><span class="volume-label">Volume XVII</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XVII.pdf">Bessel models and projected periods</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XVII.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XVII.tex">LaTeX</a>]</span> <span class="format">100 pp.</span></span></li>
-      <li><span class="volume-label">Volume XVIII</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XVIII.pdf">Terminal characters, measures and Whittaker normalizations</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XVIII.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XVIII.tex">LaTeX</a>]</span> <span class="format">108 pp.</span></span></li>
-      <li><span class="volume-label">Volume XIX</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XIX.pdf">Local orbital integrals and flag lattices</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XIX.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XIX.tex">LaTeX</a>]</span> <span class="format">98 pp.</span></span></li>
-      <li><span class="volume-label">Volume XX</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XX.pdf">Real orbital integrals and matrix coefficients</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XX.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XX.tex">LaTeX</a>]</span> <span class="format">92 pp.</span></span></li>
-      <li><span class="volume-label">Volume XXI</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XXI.pdf">Rational flag masses and ordinary traces at the marks</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XXI.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XXI.tex">LaTeX</a>]</span> <span class="format">108 pp.</span></span></li>
-      <li><span class="volume-label">Volume XXII</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XXII.pdf">Signed orbital integrals on the marked rows</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XXII.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XXII.tex">LaTeX</a>]</span> <span class="format">130 pp.</span></span></li>
-      <li><span class="volume-label">Volume XXIII</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XXIII.pdf">Integral coefficient lattices and tests for periods</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XXIII.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XXIII.tex">LaTeX</a>]</span> <span class="format">100 pp.</span></span></li>
-      <li><span class="volume-label">Volume XXIV</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XXIV.pdf">Marked theta columns and terminal covectors</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XXIV.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XXIV.tex">LaTeX</a>]</span> <span class="format">84 pp.</span></span></li>
-      <li><span class="volume-label">Volume XXV</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XXV.pdf">Rational flags and the second moment of Bessel periods</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XXV.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XXV.tex">LaTeX</a>]</span> <span class="format">99 pp.</span></span></li>
-      <li><span class="volume-label">Volume XXVI</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XXVI.pdf">Local Bessel correlations and relative Gram frequencies</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XXVI.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XXVI.tex">LaTeX</a>]</span> <span class="format">142 pp.</span></span></li>
-      <li><span class="volume-label">Volume XXVII</span><span><a href="v930/Dirichlet-GRH-v930-Volume-XXVII.pdf">Heights, Gram operators and divisors of projected theta periods</a> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XXVII.pdf">PDF</a>]</span> <span class="format">[<a href="v930/Dirichlet-GRH-v930-Volume-XXVII.tex">LaTeX</a>]</span> <span class="format">109 pp.</span></span></li>
+      <li><span class="volume-label">Volume I</span><span class="volume-title">Dirichlet zeros and the arithmetic of power intervals</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-I.pdf" aria-label="Volume I PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-I.tex" download aria-label="Volume I LaTeX source">LaTeX</a><span class="page-count">136 pp.</span></span></li>
+      <li><span class="volume-label">Volume II</span><span class="volume-title">Strict local conditions and Selmer groups of twists</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-II.pdf" aria-label="Volume II PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-II.tex" download aria-label="Volume II LaTeX source">LaTeX</a><span class="page-count">80 pp.</span></span></li>
+      <li><span class="volume-label">Volume III</span><span class="volume-title">Trace extensions, Frobenius lifts and local cup products</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-III.pdf" aria-label="Volume III PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-III.tex" download aria-label="Volume III LaTeX source">LaTeX</a><span class="page-count">122 pp.</span></span></li>
+      <li><span class="volume-label">Volume IV</span><span class="volume-title">Cyclotomic descent and relative strict orders</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-IV.pdf" aria-label="Volume IV PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-IV.tex" download aria-label="Volume IV LaTeX source">LaTeX</a><span class="page-count">111 pp.</span></span></li>
+      <li><span class="volume-label">Volume V</span><span class="volume-title">Class groups, special values and strict orders</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-V.pdf" aria-label="Volume V PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-V.tex" download aria-label="Volume V LaTeX source">LaTeX</a><span class="page-count">106 pp.</span></span></li>
+      <li><span class="volume-label">Volume VI</span><span class="volume-title">Marked Galois deformations and trace congruences</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-VI.pdf" aria-label="Volume VI PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-VI.tex" download aria-label="Volume VI LaTeX source">LaTeX</a><span class="page-count">92 pp.</span></span></li>
+      <li><span class="volume-label">Volume VII</span><span class="volume-title">Auxiliary fields and ordinary cuspidal families</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-VII.pdf" aria-label="Volume VII PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-VII.tex" download aria-label="Volume VII LaTeX source">LaTeX</a><span class="page-count">84 pp.</span></span></li>
+      <li><span class="volume-label">Volume VIII</span><span class="volume-title">Integral trace quotients and Hecke support</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-VIII.pdf" aria-label="Volume VIII PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-VIII.tex" download aria-label="Volume VIII LaTeX source">LaTeX</a><span class="page-count">85 pp.</span></span></li>
+      <li><span class="volume-label">Volume IX</span><span class="volume-title">Fixed-weight Hecke support and symplectic deformations</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-IX.pdf" aria-label="Volume IX PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-IX.tex" download aria-label="Volume IX LaTeX source">LaTeX</a><span class="page-count">127 pp.</span></span></li>
+      <li><span class="volume-label">Volume X</span><span class="volume-title">Projected torus periods and congruence modules</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-X.pdf" aria-label="Volume X PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-X.tex" download aria-label="Volume X LaTeX source">LaTeX</a><span class="page-count">84 pp.</span></span></li>
+      <li><span class="volume-label">Volume XI</span><span class="volume-title">Strict cohomology at exceptional weights</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XI.pdf" aria-label="Volume XI PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XI.tex" download aria-label="Volume XI LaTeX source">LaTeX</a><span class="page-count">119 pp.</span></span></li>
+      <li><span class="volume-label">Volume XII</span><span class="volume-title">Cuspidal companions and ordinary Hecke fibers</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XII.pdf" aria-label="Volume XII PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XII.tex" download aria-label="Volume XII LaTeX source">LaTeX</a><span class="page-count">96 pp.</span></span></li>
+      <li><span class="volume-label">Volume XIII</span><span class="volume-title">CM theta derivatives and Frobenius translates</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XIII.pdf" aria-label="Volume XIII PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XIII.tex" download aria-label="Volume XIII LaTeX source">LaTeX</a><span class="page-count">117 pp.</span></span></li>
+      <li><span class="volume-label">Volume XIV</span><span class="volume-title">Unitary branching and first occurrence in the theta tower</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XIV.pdf" aria-label="Volume XIV PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XIV.tex" download aria-label="Volume XIV LaTeX source">LaTeX</a><span class="page-count">122 pp.</span></span></li>
+      <li><span class="volume-label">Volume XV</span><span class="volume-title">Definite theta kernels and the three global exchanges</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XV.pdf" aria-label="Volume XV PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XV.tex" download aria-label="Volume XV LaTeX source">LaTeX</a><span class="page-count">102 pp.</span></span></li>
+      <li><span class="volume-label">Volume XVI</span><span class="volume-title">Integral theta projections and terminal determinants</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XVI.pdf" aria-label="Volume XVI PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XVI.tex" download aria-label="Volume XVI LaTeX source">LaTeX</a><span class="page-count">93 pp.</span></span></li>
+      <li><span class="volume-label">Volume XVII</span><span class="volume-title">Bessel models and projected periods</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XVII.pdf" aria-label="Volume XVII PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XVII.tex" download aria-label="Volume XVII LaTeX source">LaTeX</a><span class="page-count">100 pp.</span></span></li>
+      <li><span class="volume-label">Volume XVIII</span><span class="volume-title">Terminal characters, measures and Whittaker normalizations</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XVIII.pdf" aria-label="Volume XVIII PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XVIII.tex" download aria-label="Volume XVIII LaTeX source">LaTeX</a><span class="page-count">108 pp.</span></span></li>
+      <li><span class="volume-label">Volume XIX</span><span class="volume-title">Local orbital integrals and flag lattices</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XIX.pdf" aria-label="Volume XIX PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XIX.tex" download aria-label="Volume XIX LaTeX source">LaTeX</a><span class="page-count">98 pp.</span></span></li>
+      <li><span class="volume-label">Volume XX</span><span class="volume-title">Real orbital integrals and matrix coefficients</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XX.pdf" aria-label="Volume XX PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XX.tex" download aria-label="Volume XX LaTeX source">LaTeX</a><span class="page-count">92 pp.</span></span></li>
+      <li><span class="volume-label">Volume XXI</span><span class="volume-title">Rational flag masses and ordinary traces at the marks</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XXI.pdf" aria-label="Volume XXI PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XXI.tex" download aria-label="Volume XXI LaTeX source">LaTeX</a><span class="page-count">108 pp.</span></span></li>
+      <li><span class="volume-label">Volume XXII</span><span class="volume-title">Signed orbital integrals on the marked rows</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XXII.pdf" aria-label="Volume XXII PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XXII.tex" download aria-label="Volume XXII LaTeX source">LaTeX</a><span class="page-count">130 pp.</span></span></li>
+      <li><span class="volume-label">Volume XXIII</span><span class="volume-title">Integral coefficient lattices and tests for periods</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XXIII.pdf" aria-label="Volume XXIII PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XXIII.tex" download aria-label="Volume XXIII LaTeX source">LaTeX</a><span class="page-count">100 pp.</span></span></li>
+      <li><span class="volume-label">Volume XXIV</span><span class="volume-title">Marked theta columns and terminal covectors</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XXIV.pdf" aria-label="Volume XXIV PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XXIV.tex" download aria-label="Volume XXIV LaTeX source">LaTeX</a><span class="page-count">84 pp.</span></span></li>
+      <li><span class="volume-label">Volume XXV</span><span class="volume-title">Rational flags and the second moment of Bessel periods</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XXV.pdf" aria-label="Volume XXV PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XXV.tex" download aria-label="Volume XXV LaTeX source">LaTeX</a><span class="page-count">99 pp.</span></span></li>
+      <li><span class="volume-label">Volume XXVI</span><span class="volume-title">Local Bessel correlations and relative Gram frequencies</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XXVI.pdf" aria-label="Volume XXVI PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XXVI.tex" download aria-label="Volume XXVI LaTeX source">LaTeX</a><span class="page-count">142 pp.</span></span></li>
+      <li><span class="volume-label">Volume XXVII</span><span class="volume-title">Heights, Gram operators and divisors of projected theta periods</span><span class="volume-links"><a href="v930/Dirichlet-GRH-v930-Volume-XXVII.pdf" aria-label="Volume XXVII PDF">PDF</a> · <a href="v930/Dirichlet-GRH-v930-Volume-XXVII.tex" download aria-label="Volume XXVII LaTeX source">LaTeX</a><span class="page-count">109 pp.</span></span></li>
 </ul>
+</details>
+</section>
+<section id="simplification">
+<h2>2. Further Simplification</h2>
+<p>A parallel line of work aimed at further simplifying the approach to Dirichlet GRH.</p>
+<p class="meta"><strong>Version 653</strong> · 28 November 2026 · 920 pages</p>
+<p class="manuscript-title">Zeros of Dirichlet L-functions and One-Sided Estimates</p>
+<p class="links"><a href="simplification/v653.pdf">PDF</a> &nbsp;·&nbsp; <a href="simplification/v653.tex" download>LaTeX source</a></p>
+</section>
+<section id="archive">
+<h2>Archive</h2>
+<p class="meta"><strong>Edition 700</strong> · 26 November 2026 · 20 volumes</p>
+<p><a href="v700/Dirichlet-GRH-v700.zip" download>Download the archived edition (PDF &amp; LaTeX, ZIP)</a></p>
 </section>
 <section id="feedback">
 <h2>Feedback</h2>
-<a href="../#contact">Contact information</a>.</p>
+<p><a href="mailto:drdmath@amss.ac.cn">drdmath@amss.ac.cn</a></p>
 </section>
 </main>
-<footer>Last updated: 27 November 2026</footer>
 </div>
 </body>
 </html>
